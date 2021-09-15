@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Rigidbody playedbody;
-    public CharacterController player;
-    public int movementspeed;
+    public int movementspeed  = 5;
+    public int sensitivity = 2;
+    public GameObject camara;
     void Update()
     {
-        
         if (Input.GetKey(KeyCode.W))
         {
-           playedbody.AddForce(Vector3.forward);
-          
+            transform.Translate(Vector3.forward  * movementspeed * Time.deltaTime);  a
         }
         if (Input.GetKey(KeyCode.S))
         {
-            playedbody.AddForce(Vector3.back);
-
+            transform.Translate(Vector3.back * movementspeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            playedbody.AddForce(Vector3.left);
-
+            transform.Translate(Vector3.left * movementspeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            playedbody.AddForce(Vector3.right);
-
+            transform.Translate(Vector3.right * movementspeed * Time.deltaTime);
         }
+
+
+
+        transform.transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity, 0);
+       
+
     }
 }
