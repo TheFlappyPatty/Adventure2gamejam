@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward  * movementspeed * Time.deltaTime);  a
+            transform.Translate(Vector3.forward  * movementspeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
