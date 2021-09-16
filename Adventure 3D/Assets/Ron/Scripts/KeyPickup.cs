@@ -6,6 +6,7 @@ public class KeyPickup : MonoBehaviour
 {
     public bool Key;
     public GameObject Door;
+    public Light keylight;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +26,13 @@ public class KeyPickup : MonoBehaviour
             {
                 Door.SetActive(false);
             }
+        }
+    }
+    private void Update()
+    {
+        if(Key == true)
+        {
+            
         }
     }
 }
