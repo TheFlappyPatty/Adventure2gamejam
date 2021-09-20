@@ -6,7 +6,9 @@ public class KeyPickup : MonoBehaviour
 {
     public bool Key;
     public GameObject Door;
+    public GameObject key2;
     public Light keylight;
+    public Color32 lightcolor;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +19,8 @@ public class KeyPickup : MonoBehaviour
     void Keypickedup()
     {
         Key = true;
+        keylight.color = lightcolor;
+        key2.SetActive(false);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,13 +30,6 @@ public class KeyPickup : MonoBehaviour
             {
                 Door.SetActive(false);
             }
-        }
-    }
-    private void Update()
-    {
-        if(Key == true)
-        {
-            
         }
     }
 }
