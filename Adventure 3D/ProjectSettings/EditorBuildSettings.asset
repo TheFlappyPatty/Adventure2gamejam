@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Ron/main menu.unity
+    guid: f4900330cc7b4ae468348def474c8e5a
+  - enabled: 1
     path: Assets/Joseph/Game.unity
     guid: 53e5f243953524b41813595c17cef455
+  - enabled: 1
+    path: Assets/Ron/credits.unity
+    guid: 170164923cab24347a48fb60bd405ecf
   m_configObjects: {}
