@@ -9,6 +9,7 @@ public class KeyPickup : MonoBehaviour
     public GameObject key2;
     public Light keylight;
     public Color32 lightcolor;
+    public GameObject keysound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,7 @@ public class KeyPickup : MonoBehaviour
         Key = true;
         keylight.color = lightcolor;
         key2.SetActive(false);
+        keysound.SetActive(true);
     }
     private void OnCollisionEnter(Collision collision)
     {
