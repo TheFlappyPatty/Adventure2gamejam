@@ -13,6 +13,7 @@ public class THECHALIS : MonoBehaviour
     public GameObject trap2;
     public GameObject trap3;
     public GameObject trap4;
+    public GameObject audio2;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -25,6 +26,7 @@ public class THECHALIS : MonoBehaviour
             trap3.SetActive(true);
             trap4.SetActive(true);
             exit.SetActive(true);
+            audio2.SetActive(true);
         }
         if (collision.collider.tag == ("EXIT"))
         {
